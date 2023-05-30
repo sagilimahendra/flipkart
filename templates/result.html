@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/index.css">
+    <title>Review</title>
+</head>
+
+<body>
+    <h1>Results</h1>
+
+    <div class="center">
+        <table>
+            <center><table border="1"</center>
+
+            <tr>
+                <th>Comment</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>DateTime</th>
+                <th>Comment_Header</th>
+                <th>Name_P</th>
+            </tr>
+
+            {% for review in reviews %}
+
+            <tr>
+                <td> {{review['Comment']}} </td>
+                
+                <td> {{review['Name']}} </td>
+                <td> {{review['Price']}} </td>
+                <td> {{review['DateTime']}} </td>
+                <td> {{review['Comment_Header']}} </td>
+                <td> {{review['Name_P']}} </td>
+
+
+                
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+</body>
+
+</html>
